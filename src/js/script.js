@@ -7,7 +7,6 @@ import {UserInfo} from './userInfo.js';
 
 import "../pages/index.css";
 
-
 //(function () {
 /* Объявления классов */
 const popupAdd = new Popup(document.querySelector('#popup-add'), 'popup_is-opened');
@@ -21,9 +20,9 @@ const newCard = (obj, idUser, idCard) => {
 }
 const cardList = new CardList(document.querySelector('.places-list'), newCard);
 
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort11' : 'https://praktikum.tk/cohort11';/////////////
-//'https://praktikum.tk/cohort11'
-const api = new Api(serverUrl, '00df0ea2-820a-43f7-978c-ba3837ea27da');/////////////
+
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort11' : 'https://praktikum.tk/cohort11';
+const api = new Api(serverUrl, '00df0ea2-820a-43f7-978c-ba3837ea27da');
 api.getInitialCards()
   .then(res => {
     cardList.render(res);
