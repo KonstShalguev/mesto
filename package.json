@@ -1,7 +1,8 @@
 {
   "name": "mesto",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
+  "homepage": "https://konstshalguev.github.io/mesto/",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
@@ -18,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/KonstShalguev/mesto/issues"
   },
-  "homepage": "https://github.com/KonstShalguev/mesto#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
