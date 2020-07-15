@@ -1,3 +1,5 @@
+import "../pages/index.css";
+console.log('fgkofgfgf')
 (function () {
 /* Объявления классов */
 const popupAdd = new Popup(document.querySelector('#popup-add'), 'popup_is-opened');
