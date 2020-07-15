@@ -1,6 +1,14 @@
+import {Api} from './api.js';
+import {Card} from './card.js';
+import {CardList} from './cardList.js';
+import {FormValidator} from './formValidator.js';
+import {Popup} from './popup.js';
+import {UserInfo} from './userInfo.js';
+
 import "../pages/index.css";
-console.log('fgkofgfgf')
-(function () {
+
+
+//(function () {
 /* Объявления классов */
 const popupAdd = new Popup(document.querySelector('#popup-add'), 'popup_is-opened');
 const popupEdit = new Popup(document.querySelector('#popup-edit'), 'popup_is-opened');
@@ -129,4 +137,4 @@ form.addEventListener('submit', function(event){
       buttonSaveCard.textContent = '+';
     })
 });
-})();
+//})();

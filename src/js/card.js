@@ -1,4 +1,4 @@
-class Card {
+export class Card {
   constructor(poupImg, obj, api, idUser, idCard, imgPopup){
     this.poupImg = poupImg;
     this.link = obj.link;
