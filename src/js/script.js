@@ -7,7 +7,6 @@ import {UserInfo} from './userInfo.js';
 
 import "../pages/index.css";
 
-//(function () {
 /* Объявления классов */
 const popupAdd = new Popup(document.querySelector('#popup-add'), 'popup_is-opened');
 const popupEdit = new Popup(document.querySelector('#popup-edit'), 'popup_is-opened');
@@ -21,7 +20,8 @@ const newCard = (obj, idUser, idCard) => {
 const cardList = new CardList(document.querySelector('.places-list'), newCard);
 
 
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort11' : 'https://praktikum.tk/cohort11';
+const serverUrl = NODE_ENV === 'development' ? 'http://nomoreparties.co/cohort11' : 'https://nomoreparties.co/cohort11';
+
 const api = new Api(serverUrl, '00df0ea2-820a-43f7-978c-ba3837ea27da');
 api.getInitialCards()
   .then(res => {
@@ -56,7 +56,7 @@ const userId = '2db8f103c53b552e2b100af0';
 
 /* Слушатели событий */
 popupCloseIcon.forEach(function(element){
-  element.addEventListener('click', function(){
+  element.addEventListener('click', function(event){
     const popup = event.target.closest('.popup');
 
     if (popup.id === 'popup-add') {
@@ -138,4 +138,3 @@ form.addEventListener('submit', function(event){
       buttonSaveCard.textContent = '+';
     })
 });
-//})();
